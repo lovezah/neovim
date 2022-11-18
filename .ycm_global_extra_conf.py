@@ -14,7 +14,7 @@ BASE_FLAGS = [
     '-Wformat=2',
     '-Wfloat-equal',
     # '-Wconversion',
-    '-Wlogical-op',
+    #'-Wlogical-op',
     '-Wcast-qual',
     '-Wcast-align',
     '-std=c++17',

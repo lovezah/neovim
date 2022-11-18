@@ -13,8 +13,14 @@ set clipboard+=unnamedplus
 " python3 support
 let g:python3_host_prog = '/usr/bin/python3.8'
 
-colorscheme NeoSolarized
+syntax enable
+let g:Neosolarized_contrast = "high"
+let g:Neosolarized_visibility = 'low'
+set termguicolors
 set background=light
+colorscheme NeoSolarized
+highlight Folded guifg=black
+"highlight FoldColumn guibg=darkgrey guifg=white
 
 " handle lambda correctly
 setlocal cindent
@@ -40,6 +46,6 @@ let g:ycm_extra_conf_vim_data = [
 let g:ycm_global_ycm_extra_conf = '~/.ycm_global_extra_conf.py'
 
 set termguicolors
-hi Cursor guifg=white guibg=steelblue
+hi Cursor guifg=black guibg=darkgrey
 hi Cursor2 guifg=black guibg=black
 set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
