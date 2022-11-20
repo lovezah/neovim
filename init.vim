@@ -9,6 +9,7 @@ set termguicolors
 syntax on
 set foldmethod=syntax
 set clipboard+=unnamedplus
+set noswapfile
 
 " python3 support
 let g:python3_host_prog = '/usr/bin/python3.8'
@@ -46,6 +47,7 @@ let g:ycm_extra_conf_vim_data = [
 let g:ycm_global_ycm_extra_conf = '~/.ycm_global_extra_conf.py'
 
 set termguicolors
+"hi Cursor guifg=#FFFFFF guibg=#494937
+hi Normal guifg=#000000
 hi Cursor guifg=black guibg=darkgrey
 hi Cursor2 guifg=black guibg=black
-set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
