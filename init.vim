@@ -14,6 +14,11 @@ set noswapfile
 " python3 support
 let g:python3_host_prog = '/usr/bin/python3.8'
 
+"Append template to new C++ files
+autocmd BufNewFile *.cpp 0r /home/zah/programming/cp-template/src/zah.cpp
+autocmd BufNewFile * normal G
+autocmd BufNewFile * normal dd
+
 syntax enable
 let g:Neosolarized_contrast = "high"
 let g:Neosolarized_visibility = 'low'
@@ -21,7 +26,6 @@ set termguicolors
 set background=light
 colorscheme NeoSolarized
 highlight Folded guifg=black
-"highlight FoldColumn guibg=darkgrey guifg=white
 
 " handle lambda correctly
 setlocal cindent
@@ -38,6 +42,7 @@ if executable(s:clip)
 	augroup END
 endif
 
+" YouCompleteMe
 let g:ycm_python_interpreter_path = ''
 let g:ycm_python_sys_path = []
 let g:ycm_extra_conf_vim_data = [
@@ -45,9 +50,26 @@ let g:ycm_extra_conf_vim_data = [
 			\  'g:ycm_python_sys_path'
 			\]
 let g:ycm_global_ycm_extra_conf = '~/.ycm_global_extra_conf.py'
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_show_diagnostics_ui = 1
 
-set termguicolors
-"hi Cursor guifg=#FFFFFF guibg=#494937
+
+"color
 hi Normal guifg=#000000
 hi Cursor guifg=black guibg=darkgrey
 hi Cursor2 guifg=black guibg=black
+
+" nerdtree  F2 open or close the NerdTree
+map <F2> :NERDTreeToggle<CR>
+let NERDTreeWinSize=25
+
+" LightLine
+set laststatus=2
+let g:lightline = {
+			\ 'colorscheme': 'solarized',
+			\ }
