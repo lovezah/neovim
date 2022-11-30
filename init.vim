@@ -68,8 +68,9 @@ hi Cursor2 guifg=black guibg=black
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeWinSize=25
 
-" LightLine
-set laststatus=2
-let g:lightline = {
-			\ 'colorscheme': 'solarized',
-			\ }
+" AirLine
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline_highlighting_cache = 1
+let g:airline_powerline_fonts = 1
